@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/online"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-condensed"
         android:paddingStart="2dp"
         android:paddingEnd="10dp"
-        android:text="Joyce"
+        android:text="Offline"
         android:textSize="12sp" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:paddingTop="5dp"
         android:paddingEnd="10dp"
         android:paddingBottom="5dp"
-        android:text="My Name is Joyce"
+        android:text="Am Carlos"
         android:textColor="@color/black"
         android:textSize="14sp" />
 
