@@ -17,7 +17,6 @@
         android:paddingBottom="5dp"
         android:textColor="@color/black"
         android:background="@color/transparent"
-        android:fontFamily="cursive"
         android:textSize="14sp"
         android:layout_marginBottom="5dp"
         android:layout_marginEnd="7dp"
