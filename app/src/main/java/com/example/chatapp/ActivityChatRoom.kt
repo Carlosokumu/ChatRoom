@@ -5,10 +5,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chatapp.models.Message
-import com.example.chatapp.models.MessageType
-import com.example.chatapp.models.SendMessage
-import com.example.chatapp.models.initialData
+import com.example.chatapp.models.*
 import com.google.gson.Gson
 import io.socket.client.IO
 import io.socket.client.Socket
@@ -36,7 +33,7 @@ class ActivityChatRoom : AppCompatActivity() {
             e.printStackTrace()
         }
         try {
-            mSocket = IO.socket("http://192.168.43.209:3000")
+            mSocket = IO.socket("https://chatsocketcarlos.herokuapp.com")
             Toast.makeText(this,"we got here",Toast.LENGTH_SHORT).show()
             Log.d("success","connected")
 
@@ -80,6 +77,14 @@ class ActivityChatRoom : AppCompatActivity() {
         addItemToRecyclerView(chat)
         Log.d(TAG, "on New User triggered.")
     }
+    var online = Emitter.Listener {
+        val status: OnlineStatus = gson.fromJson(it[0].toString(), OnlineStatus::class.java)
+        chatRoomAdapter.setStatus(status)
+        runOnUiThread {
+            onlineStatus.text=status.online
+        }
+        Log.d("online",status.online)
+    }
 
 
 
@@ -88,7 +93,6 @@ class ActivityChatRoom : AppCompatActivity() {
             val sendData = SendMessage(userName, content, roomName)
             val jsonData = gson.toJson(sendData)
             mSocket.emit("newMessage", jsonData)
-
             val message = Message(userName, content, roomName, MessageType.CHAT_MINE.index)
             addItemToRecyclerView(message)
         }
@@ -113,6 +117,16 @@ class ActivityChatRoom : AppCompatActivity() {
             mSocket.emit("unsubscribe", jsonData)
             mSocket.disconnect()
         }
+
+    override fun onResume() {
+        super.onResume()
+        val data=gson.toJson(OnlineStatus("Online",offline = "offline",roomName = roomName))
+        mSocket.emit("online",data)
+        mSocket.on("online", online)
+
+    }
+
+
 
     }
 

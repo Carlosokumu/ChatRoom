@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chatapp.models.OnlineStatus
 
 class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.example.chatapp.models.Message>) : RecyclerView.Adapter<ChatRoomAdapter.ViewHolder>(){
 
@@ -15,6 +16,7 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
     val CHAT_PARTNER = 1
     val USER_JOIN = 2
     val USER_LEAVE = 3
+    private lateinit var status: OnlineStatus
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.d("chatlist size",chatList.size.toString())
@@ -30,6 +32,7 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
             1 ->
             {
                 view = LayoutInflater.from(context).inflate(R.layout.row_chat_partner,parent,false)
+
                 Log.d("partner inflating","viewType : ${viewType}")
             }
             2 -> {
@@ -43,6 +46,9 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
         }
 
         return ViewHolder(view!!)
+    }
+    fun setStatus(status: OnlineStatus){
+        this.status=status
     }
 
     override fun getItemCount(): Int {
@@ -64,25 +70,25 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
         when(viewType) {
 
             CHAT_MINE -> {
-                holder.message.setText(content)
+                holder.message.text = content
             }
             CHAT_PARTNER ->{
-                holder.userName.setText(userName)
-                holder.message.setText(content)
+                holder.online.text = status.online
+                holder.message.text = content
             }
             USER_JOIN -> {
                 val text = "$userName has entered the room"
-                holder.text.setText(text)
+                holder.text.text = text
             }
             USER_LEAVE -> {
                 val text = "${userName} has leaved the room"
-                holder.text.setText(text)
+                holder.text.text = text
             }
         }
 
     }
     inner class ViewHolder(itemView : View):  RecyclerView.ViewHolder(itemView) {
-        val userName = itemView.findViewById<TextView>(R.id.username)
+        val online = itemView.findViewById<TextView>(R.id.online)
         val message = itemView.findViewById<TextView>(R.id.message)
         val text = itemView.findViewById<TextView>(R.id.text)
     }
