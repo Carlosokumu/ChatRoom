@@ -1,4 +1,7 @@
 package com.example.chatapp.local.Daos
 
-class UserDao {
+import androidx.room.Dao
+
+@Dao
+interface UserDao {
 }
