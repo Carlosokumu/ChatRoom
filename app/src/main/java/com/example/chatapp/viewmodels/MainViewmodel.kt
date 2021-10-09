@@ -1,7 +1,7 @@
 package com.example.chatapp.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.example.chatapp.remote.Respository
+import com.example.chatapp.remote.Repository
 
-class MainViewmodel(val respository: Respository):ViewModel() {
+class MainViewmodel(val respository: Repository):ViewModel() {
 }
