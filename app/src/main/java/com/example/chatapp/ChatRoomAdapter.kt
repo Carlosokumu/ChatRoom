@@ -12,11 +12,12 @@ import com.example.chatapp.models.OnlineStatus
 import timber.log.Timber
 
 class ChatRoomAdapter(private val context : Context, val chatList : ArrayList<com.example.chatapp.models.Message>) : RecyclerView.Adapter<ChatRoomAdapter.ViewHolder>(){
-
-    val CHAT_MINE = 0
-    val CHAT_PARTNER = 1
-    val USER_JOIN = 2
-    val USER_LEAVE = 3
+   companion object {
+       val CHAT_MINE = 0
+       val CHAT_PARTNER = 1
+       val USER_JOIN = 2
+       val USER_LEAVE = 3
+   }
     private lateinit var status: OnlineStatus
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
