@@ -11,6 +11,7 @@ import io.socket.client.IO
 import io.socket.client.Socket
 import io.socket.emitter.Emitter
 import kotlinx.android.synthetic.main.activity_chat_room.*
+import timber.log.Timber
 import java.net.URISyntaxException
 
 class ActivityChatRoom : AppCompatActivity() {
@@ -39,9 +40,8 @@ class ActivityChatRoom : AppCompatActivity() {
 
         } catch (e: URISyntaxException) {
             e.printStackTrace()
-            Log.d("fail", "Failed to connect")
-            Log.d("could not connect",e.message!!)
-            Toast.makeText(this,"we got here again",Toast.LENGTH_SHORT).show()
+            Timber.d("Failed to connect")
+            Timber.d(e.message!!)
         }
         mSocket.connect()
         mSocket.on(Socket.EVENT_CONNECT, onConnect)
@@ -75,7 +75,7 @@ class ActivityChatRoom : AppCompatActivity() {
         val name = it[0] as String //This pass the userName!
         val chat = Message(name, "", roomName, MessageType.USER_JOIN.index)
         addItemToRecyclerView(chat)
-        Log.d(TAG, "on New User triggered.")
+        Timber.d("on New User triggered.")
     }
     var online = Emitter.Listener {
         val status: OnlineStatus = gson.fromJson(it[0].toString(), OnlineStatus::class.java)
@@ -83,7 +83,7 @@ class ActivityChatRoom : AppCompatActivity() {
         runOnUiThread {
             onlineStatus.text=status.online
         }
-        Log.d("online",status.online)
+        Timber.d(status.online)
     }
 
 

@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.models.OnlineStatus
+import timber.log.Timber
 
 class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.example.chatapp.models.Message>) : RecyclerView.Adapter<ChatRoomAdapter.ViewHolder>(){
 
@@ -19,7 +20,7 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
     private lateinit var status: OnlineStatus
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        Log.d("chatlist size",chatList.size.toString())
+        Timber.d(chatList.size.toString())
         Toast.makeText(context,"onCreate called",Toast.LENGTH_SHORT).show()
         var view : View? = null
         when(viewType){
@@ -56,7 +57,7 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
     }
 
     override fun getItemViewType(position: Int): Int {
-        Log.d("viewtype","viewtype called")
+        Timber.d("viewtype called")
         Toast.makeText(context,"View type first",Toast.LENGTH_SHORT).show()
         return chatList[position].viewType
     }
