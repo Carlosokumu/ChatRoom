@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.models.OnlineStatus
 import timber.log.Timber
 
-class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.example.chatapp.models.Message>) : RecyclerView.Adapter<ChatRoomAdapter.ViewHolder>(){
+class ChatRoomAdapter(private val context : Context, val chatList : ArrayList<com.example.chatapp.models.Message>) : RecyclerView.Adapter<ChatRoomAdapter.ViewHolder>(){
 
     val CHAT_MINE = 0
     val CHAT_PARTNER = 1
@@ -27,22 +27,22 @@ class ChatRoomAdapter(val context : Context, val chatList : ArrayList<com.exampl
 
             0 ->{
                 view = LayoutInflater.from(context).inflate(R.layout.row_chat_user,parent,false)
-                Log.d("user inflating","viewType : ${viewType}")
+                Timber.d("$viewType")
             }
 
             1 ->
             {
                 view = LayoutInflater.from(context).inflate(R.layout.row_chat_partner,parent,false)
 
-                Log.d("partner inflating","viewType : ${viewType}")
+                Timber.d("$viewType")
             }
             2 -> {
                 view = LayoutInflater.from(context).inflate(R.layout.chat_into_notification,parent,false)
-                Log.d("someone in or out","viewType : ${viewType}")
+                Timber.d("$viewType")
             }
             3 -> {
                 view = LayoutInflater.from(context).inflate(R.layout.chat_into_notification,parent,false)
-                Log.d("someone in or out","viewType : ${viewType}")
+                Timber.d("$viewType")
             }
         }
 
