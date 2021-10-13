@@ -14,12 +14,8 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         makeStatusBarTransparent()
-        val dialog = LoadingDialog[this].show()
-        val loading=findViewById<LoadingView>(R.id.loadingView)
-        loading.start()
         Handler().postDelayed({
             startActivity(Intent(this@Splash,EntryActivity::class.java) )
-            loading.stop()
             finish()
         },4000)
         //dialog.hide()
