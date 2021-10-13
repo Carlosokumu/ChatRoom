@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/auth">
+    <fragment
+        android:id="@+id/auth"
+        android:name="com.example.chatapp.auth"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_auth_to_chatpage"
+            app:destination="@id/chatpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatpage"
+        android:name="com.example.chatapp.chatpage"
+        android:label="fragment_chatpage"
+        tools:layout="@layout/fragment_chatpage" />
 </navigation>
