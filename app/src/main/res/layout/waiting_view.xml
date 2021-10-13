@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/preview"  />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Sign up using phonenumber,  Upon verification we will be uploading your number 😉"
+        android:textColor="#1DA1F2"
+        android:textAlignment="center" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/sms_code_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:inputType="number"
+        android:visibility="gone"
+        android:layout_marginLeft="30dp"
+        android:layout_margin="9dp"
+        android:textSize="20sp"
+        android:layout_gravity="end"
+        android:textStyle="bold"
+        android:textColorHint="@color/bg_main"
+        android:hint="code">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+
+
+
+
+
+
+
+    <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+        android:id="@+id/timertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:hours="0"
+        app:minute="0"
+        app:second="59"
+        app:showHours="true"
+        app:textSize="12sp"
+        app:digitBackground="@android:color/transparent"
+        app:textColor="@color/tabcolo"
+        app:setAnimation="true"
+        app:colonColor="#9c9c9c"
+        app:showDays="false"
+        android:visibility="gone"
+        app:showOnlySecond="true"
+        app:daysLabel="D"
+        app:days="0"
+        app:start_automatically="false"
+        app:useFarsiNumeral="false"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ver1"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/vercodetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:animateLayoutChanges="true"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ver2"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et1"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:animateLayoutChanges="true"
+            android:textColor="@color/tabcolo"
+            android:inputType="phone"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:textStyle="bold"
+            android:layout_height="43dp" />
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"></Space>
+
+
+        <EditText
+            android:id="@+id/et2"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/tabcolo"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:textStyle="bold"
+            android:layout_height="43dp" />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"></Space>
+
+        <EditText
+            android:id="@+id/et3"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/tabcolo"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:textStyle="bold"
+            android:layout_height="43dp" />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"></Space>
+
+        <EditText
+            android:id="@+id/et4"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/tabcolo"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:textStyle="bold"
+            android:layout_height="43dp" />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"></Space>
+
+        <EditText
+            android:id="@+id/et5"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/tabcolo"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:textStyle="bold"
+            android:layout_height="43dp" />
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"></Space>
+
+        <EditText
+            android:id="@+id/et6"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/tabcolo"
+            android:textStyle="bold"
+            android:background="@drawable/background_otp"
+            android:layout_width="43dp"
+            android:layout_height="43dp" />
+
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_indicator"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+</LinearLayout>

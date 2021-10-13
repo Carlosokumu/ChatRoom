@@ -24,7 +24,7 @@ class CustomView(context: Context, attrs: AttributeSet?=null): ViewAnimator(cont
         //get An instance of the inflater to inflate the views
         val inflater= LayoutInflater.from(context)
         //Order matters as we will be displaying children views from top
-        waiting= inflater.inflate(R.layout.loading_view,this,true) as ViewGroup
+        waiting= inflater.inflate(R.layout.waiting_view,this,true) as ViewGroup
         val customResId: Int
         context.theme.obtainStyledAttributes(R.styleable.SwitcherView).apply {
             try {
