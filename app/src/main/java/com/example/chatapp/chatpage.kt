@@ -15,5 +15,5 @@ class chatpage : Fragment() {
         return inflater.inflate(R.layout.fragment_chatpage, container, false)
     }
 
-   
+
 }
