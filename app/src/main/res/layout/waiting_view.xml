@@ -38,7 +38,7 @@
         android:textSize="20sp"
         android:layout_gravity="end"
         android:textStyle="bold"
-        android:textColorHint="@color/bg_main"
+        android:textColorHint="@color/red"
         android:hint="code">
 
     </com.google.android.material.textfield.TextInputEditText>
@@ -61,7 +61,7 @@
         app:showHours="true"
         app:textSize="12sp"
         app:digitBackground="@android:color/transparent"
-        app:textColor="@color/tabcolo"
+        app:textColor="@color/black"
         app:setAnimation="true"
         app:colonColor="#9c9c9c"
         app:showDays="false"
@@ -113,9 +113,9 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:animateLayoutChanges="true"
-            android:textColor="@color/tabcolo"
+            android:textColor="@color/black"
             android:inputType="phone"
-            android:background="@drawable/background_otp"
+            android:background="@color/wheat"
             android:layout_width="43dp"
             android:textStyle="bold"
             android:layout_height="43dp" />
@@ -129,8 +129,8 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:inputType="numberSigned"
-            android:textColor="@color/tabcolo"
-            android:background="@drawable/background_otp"
+            android:textColor="@color/black"
+            android:background="@color/wheat"
             android:layout_width="43dp"
             android:textStyle="bold"
             android:layout_height="43dp" />
@@ -144,8 +144,8 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:inputType="numberSigned"
-            android:textColor="@color/tabcolo"
-            android:background="@drawable/background_otp"
+            android:textColor="@color/black"
+            android:background="@color/black"
             android:layout_width="43dp"
             android:textStyle="bold"
             android:layout_height="43dp" />
@@ -159,8 +159,8 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:inputType="numberSigned"
-            android:textColor="@color/tabcolo"
-            android:background="@drawable/background_otp"
+            android:textColor="@color/black"
+            android:background="@color/black"
             android:layout_width="43dp"
             android:textStyle="bold"
             android:layout_height="43dp" />
@@ -174,8 +174,8 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:inputType="numberSigned"
-            android:textColor="@color/tabcolo"
-            android:background="@drawable/background_otp"
+            android:textColor="@color/black"
+            android:background="@color/black"
             android:layout_width="43dp"
             android:textStyle="bold"
             android:layout_height="43dp" />
@@ -188,9 +188,9 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:inputType="numberSigned"
-            android:textColor="@color/tabcolo"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:background="@drawable/background_otp"
+            android:background="@color/wheat"
             android:layout_width="43dp"
             android:layout_height="43dp" />
 

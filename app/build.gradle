@@ -72,5 +72,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     //cpp module
     implementation 'com.hbb20:ccp:2.0.2'
+    //Lottie
+    //lottie
+    implementation 'com.airbnb.android:lottie:3.0.7'
+    implementation 'ir.samanjafari.easycountdowntimer:easycountdowntimer:2.5.0'
 
 }
