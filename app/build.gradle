@@ -70,5 +70,7 @@ dependencies {
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    //cpp module
+    implementation 'com.hbb20:ccp:2.0.2'
 
 }
