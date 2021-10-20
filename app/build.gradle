@@ -82,5 +82,7 @@ dependencies {
     //lottie
     implementation 'com.airbnb.android:lottie:3.0.7'
     implementation 'ir.samanjafari.easycountdowntimer:easycountdowntimer:2.5.0'
+    //Yoyo animation
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
 
 }
