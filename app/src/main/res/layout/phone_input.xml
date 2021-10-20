@@ -31,7 +31,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/msyi"
-                    android:text="OTP Verification"
+                    android:text="Phone Verification"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -115,7 +115,7 @@
                     android:background="@drawable/start_button_bg"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:text="S  T  A  R  T"
+                    android:text="GET  OTP"
                     android:textColor="@color/purple_200"
                     android:textSize="14sp"/>
 
