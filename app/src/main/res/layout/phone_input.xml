@@ -75,7 +75,7 @@
 
                         <com.hbb20.CountryCodePicker
                             android:id="@+id/ccp"
-                            app:ccp_contentColor="83bc34"
+                            app:ccp_contentColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:ccp_defaultNameCode="US"  />
