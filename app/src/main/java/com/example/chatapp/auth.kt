@@ -23,18 +23,21 @@ class auth : Fragment(), CountryCodePicker.OnCountryChangeListener, View.OnClick
     private lateinit var countrycode: String
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v=inflater.inflate(R.layout.fragment_auth,container,false)
-        val customView=v.findViewById<CustomView>(R.id.customView)
-        val phone=customView.getChildAt(0)
+        //val customView=v.findViewById<CustomView>(R.id.customView)
+        //val phone=customView.getChildAt(0)
+        /*
         ccp=phone.findViewById(R.id.ccp)
         mobileNumber=phone.findViewById(R.id.mobile_number)
         otpBtn=phone.findViewById(R.id.btnOtp)
         otpBtn.setOnClickListener(this)
         ccp.setOnCountryChangeListener(this)
+
+         */
         return v
     }
 
     override fun onCountrySelected() {
-        countrycode=ccp.selectedCountryCodeWithPlus
+      //  countrycode=ccp.selectedCountryCodeWithPlus
     }
     private fun setUpWaiting() {
         if (mobileNumber.text.isBlank() || (mobileNumber.text.length != 9)){
