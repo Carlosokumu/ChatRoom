@@ -15,7 +15,7 @@ class Splash : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         makeStatusBarTransparent()
         Handler().postDelayed({
-            startActivity(Intent(this@Splash,EntryActivity::class.java) )
+            startActivity(Intent(this@Splash,LeadActivity::class.java) )
             finish()
         },4000)
         //dialog.hide()

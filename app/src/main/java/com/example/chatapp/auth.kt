@@ -15,7 +15,7 @@ import com.hbb20.CountryCodePicker
 import kotlinx.android.synthetic.main.activity_chat_room.*
 import timber.log.Timber
 
-class auth : Fragment(), CountryCodePicker.OnCountryChangeListener {
+class auth : Fragment(), CountryCodePicker.OnCountryChangeListener, View.OnClickListener {
     private lateinit var ccp: CountryCodePicker
     private lateinit var mobileNumber: EditText
     private lateinit var otpBtn: Button
@@ -27,7 +27,8 @@ class auth : Fragment(), CountryCodePicker.OnCountryChangeListener {
         val phone=customView.getChildAt(0)
         ccp=phone.findViewById(R.id.ccp)
         mobileNumber=phone.findViewById(R.id.mobile_number)
-        otpBtn=v.findViewById(R.id.customView)
+        otpBtn=phone.findViewById(R.id.btnOtp)
+        otpBtn.setOnClickListener(this)
         ccp.setOnCountryChangeListener(this)
         return v
     }
@@ -48,5 +49,9 @@ class auth : Fragment(), CountryCodePicker.OnCountryChangeListener {
         fullNumber =countrycode+ fullNumber
         Timber.d(countrycode)
         Timber.d(fullNumber)
+    }
+
+    override fun onClick(button: View?) {
+
     }
 }
