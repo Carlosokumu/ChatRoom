@@ -9,7 +9,12 @@
     <color name="transparent">#00ff0000</color>
 
 
-
+    <color name="colorPrimary">#075e55</color>
+    <color name="colorPrimaryDark">#054d44</color>
+    <color name="colorSelected">#fbffff</color>
+    <color name="colorAccent">#20c253</color>
+    <color name="colorLightGray">#f1f1f1</color>
+    <color name="colorCaption">#000</color>
 
 
 

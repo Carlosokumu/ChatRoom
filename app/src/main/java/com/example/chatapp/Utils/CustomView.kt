@@ -9,6 +9,7 @@ import android.view.animation.AlphaAnimation
 import android.widget.*
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.example.chatapp.OnNumber
 import com.example.chatapp.R
 import timber.log.Timber
 
@@ -18,6 +19,7 @@ class CustomView(context: Context, attrs: AttributeSet?=null): ViewAnimator(cont
     private val   phoneInput: View
     private lateinit var btnOtp: TextView
     private lateinit var    mobileNumber: EditText
+    private lateinit var    onNumber: OnNumber
 
     companion object {
         //STATES
@@ -50,16 +52,23 @@ class CustomView(context: Context, attrs: AttributeSet?=null): ViewAnimator(cont
         if (mobileNumber.text.isBlank() || (mobileNumber.text.length != 9)){
             YoYo.with(Techniques.Shake)
                 .duration(700)
-                .repeat(5)
+                .repeat(2)
                 .playOn(mobileNumber)
             return
         }
-        showWaiting()
         val phoneNumber=mobileNumber.text.trim().toString()
+        setUpData(phoneNumber = phoneNumber,data = {
+            showWaiting()
+            onNumber.onNumber(it)
+        } )
+
 
     }
-   fun setUpData(phoneNumber: String,data: (String) -> Unit){
+   private fun setUpData(phoneNumber: String, data: (String) -> Unit){
        data(phoneNumber)
    }
+    fun setOnNumber(onNumber: OnNumber){
+        this.onNumber=onNumber
+    }
 
 }

@@ -6,7 +6,7 @@
     app:startDestination="@id/auth">
     <fragment
         android:id="@+id/auth"
-        android:name="com.example.chatapp.auth"
+        android:name="com.example.chatapp.Auth"
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" >
         <action
