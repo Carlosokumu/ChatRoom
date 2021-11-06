@@ -1,4 +1,4 @@
-package com.example.chatapp.Utils
+package com.example.chatapp.utils
 
 import android.app.Activity
 import android.graphics.Color

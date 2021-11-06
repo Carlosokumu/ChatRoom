@@ -1,4 +1,4 @@
-package com.example.chatapp.Utils
+package com.example.chatapp.utils
 
 import android.content.Context
 import android.util.AttributeSet
@@ -11,7 +11,6 @@ import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.chatapp.OnNumber
 import com.example.chatapp.R
-import timber.log.Timber
 
 class CustomView(context: Context, attrs: AttributeSet?=null): ViewAnimator(context,attrs),
     View.OnClickListener {

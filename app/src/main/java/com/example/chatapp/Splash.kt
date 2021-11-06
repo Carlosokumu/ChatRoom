@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.chatapp.Utils.makeStatusBarTransparent
-import com.github.loadingview.LoadingDialog
-import com.github.loadingview.LoadingView
+import com.example.chatapp.utils.makeStatusBarTransparent
 
 @Suppress("DEPRECATION")
 class Splash : AppCompatActivity() {

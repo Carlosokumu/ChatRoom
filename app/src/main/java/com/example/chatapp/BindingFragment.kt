@@ -1,5 +1,6 @@
 package com.example.chatapp
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,20 +15,11 @@ abstract class BindingFragment<T : ViewDataBinding> : Fragment() {
 
     abstract val layoutResId: Int
 
-    protected lateinit var binding: T
+     lateinit var binding: T
 
 
-
-    override fun onDestroy() {
-        if (::binding.isInitialized) {
-            binding.unbind()
-        }
-        super.onDestroy()
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-       binding= DataBindingUtil.inflate(
-                inflater,layoutResId, container, false)
-        return binding.root
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        binding= DataBindingUtil.inflate(LayoutInflater.from(context),layoutResId,null,false)
     }
 }

@@ -8,13 +8,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.chatapp"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -35,7 +35,6 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding true
         dataBinding  true
     }
 }
@@ -85,5 +84,7 @@ dependencies {
     implementation 'ir.samanjafari.easycountdowntimer:easycountdowntimer:2.5.0'
     //Yoyo animation
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    //Status Bar Configuration
+    implementation 'com.github.seanghay:statusbar:1.0.1'
 
 }
