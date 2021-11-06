@@ -51,7 +51,7 @@ class Auth : BindingFragment<FragmentAuthBinding>(), OnNumber {
             navController.navigate(action)
         }
         return binding.root
-      
+
     }
 
 

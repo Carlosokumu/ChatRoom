@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatpage"
-        android:name="com.example.chatapp.chatpage"
+        android:name="com.example.chatapp.ChatPage"
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chatpage" />
 </navigation>
