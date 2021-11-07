@@ -17,6 +17,8 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>() {
 
     override val layoutResId: Int
         get() = R.layout.fragment_chatpage
+    override val color: Int
+        get() = R.color.white
 
 
 }

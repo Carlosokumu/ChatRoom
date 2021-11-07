@@ -64,6 +64,8 @@ class Auth : BindingFragment<FragmentAuthBinding>(), OnNumber {
 
     override val layoutResId: Int
         get() = R.layout.fragment_auth
+    override val color: Int
+        get() = R.color.white
 
 
 }
