@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
 
-class CameraFragmentAdapter(fragmentManager: FragmentManager):
+class FragmentAdapter(fragmentManager: FragmentManager):
         FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
     private val fragmentss = listOf(ChatListFragment(),StatusFragment())
     private val titles = listOf("Chats", "Status")
