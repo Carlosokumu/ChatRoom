@@ -1,6 +1,9 @@
 package com.example.chatapp
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.example.chatapp.databinding.FragmentChatlistBinding
 
 class ChatListFragment:BindingFragment<FragmentChatlistBinding>(){
@@ -13,6 +16,11 @@ class ChatListFragment:BindingFragment<FragmentChatlistBinding>(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.adapter=ChatAdapter()
+
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding.adapter= ChatAdapter()
+        return binding.root
     }
 }
