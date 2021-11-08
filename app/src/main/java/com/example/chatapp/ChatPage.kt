@@ -82,7 +82,33 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
     }
 
     override fun onMenuItemClick(item: MenuItem?): Boolean {
-        Toast.makeText(requireContext(),"Yeah",Toast.LENGTH_SHORT).show()
+        val list= mutableListOf(
+            PowerMenuItem("New Group", false), PowerMenuItem("Settings", false)
+        )
+        when(item?.itemId) {
+            R.id.action_settings -> {
+                val popMenu = PowerMenu.Builder(requireContext())
+                    .addItemList(list)
+                    .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
+                    .setMenuRadius(10f)
+                    .setMenuShadow(10f)
+                    .setTextColor(ContextCompat.getColor(requireContext(), R.color.beige))
+                    .setTextGravity(Gravity.CENTER)
+                    .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
+                    .setSelectedTextColor(Color.WHITE)
+                    .setMenuColor(Color.WHITE)
+                    .setSelectedMenuColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.colorPrimary
+                        )
+                    )
+                    .setOnMenuItemClickListener(this)
+                    .build()
+                popMenu.showAsDropDown(requireView())
+                Toast.makeText(requireContext(), "Yeah", Toast.LENGTH_SHORT).show()
+            }
+        }
         return true
     }
 
