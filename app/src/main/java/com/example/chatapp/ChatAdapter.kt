@@ -8,18 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.databinding.ChatListBinding
 import com.example.chatapp.models.Message
 
-
-object MessageDiff : DiffUtil.ItemCallback<Message>() {
-
-    override fun areItemsTheSame(oldItem: Message, newItem: Message) =
-            oldItem.messageContent == newItem.messageContent
-
-    override fun areContentsTheSame(oldItem: Message, newItem: Message) =
-            oldItem == newItem
-}
-
-internal class FollowersAdapter :
-        ListAdapter<Message, FollowersAdapter.ViewHolder>(MessageDiff) {
+ class ChatAdapter : ListAdapter<Message, ChatAdapter.ViewHolder>(MessageDiff) {
 
     companion object {
         private const val ITEM_WIDTH_RATIO = 0.75f
@@ -36,6 +25,9 @@ internal class FollowersAdapter :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
             holder.bind(getItem(position))
+     override fun getItemCount(): Int {
+         return 3
+     }
 
     inner class ViewHolder(val binding: ChatListBinding) :
             RecyclerView.ViewHolder(binding.root) {
@@ -43,4 +35,15 @@ internal class FollowersAdapter :
 
         }
     }
+     object MessageDiff : DiffUtil.ItemCallback<Message>() {
+
+         override fun areItemsTheSame(oldItem: Message, newItem: Message) =
+                 oldItem.messageContent == newItem.messageContent
+
+         override fun areContentsTheSame(oldItem: Message, newItem: Message) =
+                 oldItem == newItem
+     }
+
+
+
 }
