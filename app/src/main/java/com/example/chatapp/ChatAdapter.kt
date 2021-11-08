@@ -13,7 +13,7 @@ import com.example.chatapp.models.Message
 
 
      override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-         val v = LayoutInflater.from(parent.context).inflate(R.layout.chat_list, parent)
+         val v = LayoutInflater.from(parent.context).inflate(R.layout.chat_list, parent,false)
          return ViewHolder(v)
      }
 
