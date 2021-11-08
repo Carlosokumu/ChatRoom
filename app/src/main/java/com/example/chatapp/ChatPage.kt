@@ -4,6 +4,8 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.*
+import android.widget.ActionMenuView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.chatapp.databinding.FragmentChatpageBinding
 import com.skydoves.powermenu.MenuAnimation
@@ -13,7 +15,7 @@ import com.skydoves.powermenu.PowerMenuItem
 
 
 class ChatPage : BindingFragment<FragmentChatpageBinding>(),
-    OnMenuItemClickListener<PowerMenuItem> {
+    OnMenuItemClickListener<PowerMenuItem>, MenuItem.OnMenuItemClickListener {
     private val mainPagerAdapter: FragmentAdapter by lazy {
         FragmentAdapter(requireActivity().supportFragmentManager)
     }
@@ -26,6 +28,9 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
     ): View? {
         binding.adapter =mainPagerAdapter
         binding.tabs.setupWithViewPager(binding.viewpager)
+         binding.toolbar.inflateMenu(R.menu.top_menu)
+        settings= binding.toolbar.menu.findItem(R.id.action_settings)
+        settings.setOnMenuItemClickListener(this)
         return binding.root
     }
 
@@ -33,10 +38,11 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
         get() = R.layout.fragment_chatpage
     override val color: Int
         get() = R.color.white
+    /*
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-       inflater.inflate(R.menu.top_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
+       inflater.inflate(R.menu.top_menu,menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -69,8 +75,15 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
         return super.onOptionsItemSelected(item)
     }
 
+     */
+
     override fun onItemClick(position: Int, item: PowerMenuItem?) {
 
+    }
+
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        Toast.makeText(requireContext(),"Yeah",Toast.LENGTH_SHORT).show()
+        return true
     }
 
 
