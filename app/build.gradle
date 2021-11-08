@@ -86,5 +86,7 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
     //Status Bar Configuration
     implementation 'com.github.seanghay:statusbar:1.0.1'
+    //Pop Up menu
+    implementation "com.github.skydoves:powermenu:2.2.0"
 
 }
