@@ -178,4 +178,6 @@
     <color name="md_blue_100">#81D4fA</color>
     <color name="md_blue_200">#0091EA</color>
     <color name="text_mid_emphasis">#8A898E</color>
+    <color name="bluemine">#8c9eff</color>
+    <color name="light_chat">#c0cfff</color>
 </resources>
