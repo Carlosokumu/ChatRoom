@@ -3,7 +3,7 @@
     <style name="Theme.ChatApp" parent="Theme.Design.Light.NoActionBar">
         <!-- Primary brand color. -->
         <!-- ActionBar Background -->
-        <item name="colorPrimary">#c0cfff</item>
+        <item name="colorPrimary">@color/anotherWhats</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/sky_blue</item>
         <!-- Secondary brand color. -->

@@ -180,4 +180,6 @@
     <color name="text_mid_emphasis">#8A898E</color>
     <color name="bluemine">#8c9eff</color>
     <color name="light_chat">#c0cfff</color>
+    <color name="whatapp">#075E54</color>
+    <color name="anotherWhats">#435A65</color>
 </resources>

@@ -23,6 +23,11 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
     private var profileMenu: PowerMenu? = null
     private val onProfileItemClickListener = OnMenuItemClickListener<PowerMenuItem> { position, item ->
         Toast.makeText(activity, item.title, Toast.LENGTH_SHORT).show()
+        when(position) {
+            3  -> {
+                profileMenu?.dismiss()
+    }
+    }
         profileMenu!!.dismiss()
     }
 
@@ -86,13 +91,9 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
     }
 
     override fun onMenuItemClick(item: MenuItem?): Boolean {
-        val list= mutableListOf(
-                PowerMenuItem("New Group", false), PowerMenuItem("Settings", false)
-        )
         when(item?.itemId) {
             R.id.action_settings -> {
                 profileMenu?.showAsAnchorRightTop(binding.root)
-                Toast.makeText(requireContext(), "Yeah", Toast.LENGTH_SHORT).show()
             }
         }
         return true
