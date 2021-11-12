@@ -22,7 +22,8 @@ class ChatListFragment:BindingFragment<FragmentChatlistBinding>(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding.adapter= ChatAdapter(action = {
-            val action=ChatListFragmentDirections.ActionChatpageToChatmain()
+            val action =ChatListFragmentDirections.ActionChatpageToChatmain()
+            //val action=ChatListFragmentDirections.ActionChatpageToChatmain()
              val navController = Navigation.findNavController(requireView())
             navController.navigate(action)
         })

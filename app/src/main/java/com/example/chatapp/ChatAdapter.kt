@@ -3,6 +3,7 @@ package com.example.chatapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +32,7 @@ class ChatAdapter(val action: () -> Unit) : RecyclerView.Adapter<ChatAdapter.Vie
          fun bind(item: Message) {
              view.setOnClickListener {
                  action()
+                 Toast.makeText(itemView.context,"Called",Toast.LENGTH_SHORT).show()
              }
          }
      }

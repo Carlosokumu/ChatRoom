@@ -15,6 +15,14 @@
     </fragment>
     <fragment
         android:id="@+id/chatpage"
+        android:name="com.example.chatapp.ChatPage"
+        android:label="fragment_chatpage"
+        tools:layout="@layout/fragment_chatpage" >
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/chatlist"
         android:name="com.example.chatapp.ChatListFragment"
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chatpage" >
@@ -22,10 +30,9 @@
             android:id="@+id/action_chatpage_to_chatmain"
             app:destination="@id/chatmain" />
     </fragment>
-
     <fragment
         android:id="@+id/chatmain"
-        android:name="com.example.chatapp.ChatPage"
+        android:name="com.example.chatapp.ChatMain"
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chat_main" />
 </navigation>
