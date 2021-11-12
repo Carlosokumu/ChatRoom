@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.databinding.ChatListBinding
 import com.example.chatapp.models.Message
+import com.example.chatapp.utils.OnclickListener
 
- class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
+class ChatAdapter(val action: () -> Unit) : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
 
 
      override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,7 +29,9 @@ import com.example.chatapp.models.Message
 
      inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
          fun bind(item: Message) {
-
+             view.setOnClickListener {
+                 action()
+             }
          }
      }
  }

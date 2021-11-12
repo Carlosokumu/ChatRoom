@@ -3,7 +3,7 @@
     <data>
         <variable
             name="adapter"
-            type="com.example.chatapp.ChatRoomAdapter" />
+            type="com.example.chatapp.MessagesAdapter" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"

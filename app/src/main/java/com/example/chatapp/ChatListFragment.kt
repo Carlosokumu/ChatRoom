@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.chatapp.databinding.FragmentChatlistBinding
 
 class ChatListFragment:BindingFragment<FragmentChatlistBinding>(){
@@ -20,7 +21,11 @@ class ChatListFragment:BindingFragment<FragmentChatlistBinding>(){
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding.adapter= ChatAdapter()
+        binding.adapter= ChatAdapter(action = {
+            val action=ChatListFragmentDirections.ActionChatpageToChatmain()
+             val navController = Navigation.findNavController(requireView())
+            navController.navigate(action)
+        })
         return binding.root
     }
 }

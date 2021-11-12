@@ -15,11 +15,11 @@
     </fragment>
     <fragment
         android:id="@+id/chatpage"
-        android:name="com.example.chatapp.ChatPage"
+        android:name="com.example.chatapp.ChatListFragment"
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chatpage" >
         <action
-            android:id="@+id/action_chatpage_to_chatmain2"
+            android:id="@+id/action_chatpage_to_chatmain"
             app:destination="@id/chatmain" />
     </fragment>
 
