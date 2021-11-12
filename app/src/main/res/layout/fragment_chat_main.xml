@@ -22,6 +22,7 @@
         android:layout_marginStart="8dp"
         app:adapter="@{adapter}"
         android:layout_marginEnd="8dp"
+        tools:listitem="@layout/row_chat"
         android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toTopOf="@id/editText"
         app:layout_constraintEnd_toEndOf="parent"
