@@ -20,8 +20,7 @@ class ChatAdapter(val action: () -> Unit) : RecyclerView.Adapter<ChatAdapter.Vie
      }
 
      override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-
+         holder.bind()
      }
 
      override fun getItemCount(): Int {
@@ -29,7 +28,7 @@ class ChatAdapter(val action: () -> Unit) : RecyclerView.Adapter<ChatAdapter.Vie
      }
 
      inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-         fun bind(item: Message) {
+         fun bind() {
              view.setOnClickListener {
                  action()
                  Toast.makeText(itemView.context,"Called",Toast.LENGTH_SHORT).show()

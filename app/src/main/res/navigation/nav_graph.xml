@@ -18,6 +18,9 @@
         android:name="com.example.chatapp.ChatPage"
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chatpage" >
+        <action
+            android:id="@+id/action_chatpage_to_chatlist"
+            app:destination="@id/chatlist" />
     </fragment>
 
 
@@ -27,12 +30,12 @@
         android:label="fragment_chatpage"
         tools:layout="@layout/fragment_chatpage" >
         <action
-            android:id="@+id/action_chatpage_to_chatmain"
+            android:id="@+id/action_chatlist_to_chatmain"
             app:destination="@id/chatmain" />
     </fragment>
     <fragment
         android:id="@+id/chatmain"
         android:name="com.example.chatapp.ChatMain"
-        android:label="fragment_chatpage"
+        android:label="fragment_chat_main"
         tools:layout="@layout/fragment_chat_main" />
 </navigation>

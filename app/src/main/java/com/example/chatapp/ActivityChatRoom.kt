@@ -27,6 +27,7 @@ class ActivityChatRoom : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_room)
        //Get the nickname and roomname from entrance activity.
+        /*
         try {
             userName = intent.getStringExtra("userName")!!
             roomName = intent.getStringExtra("roomName")!!
@@ -49,8 +50,8 @@ class ActivityChatRoom : AppCompatActivity() {
         mSocket.on("updateChat", onUpdateChat)
         mSocket.on("userLeftChatRoom", onUserLeft)
         chatRoomAdapter = ChatRoomAdapter(this, chatList)
-        recyclerView.adapter = chatRoomAdapter
-        recyclerView.layoutManager=LinearLayoutManager(this)
+       // recyclerView.adapter = chatRoomAdapter
+       // recyclerView.layoutManager=LinearLayoutManager(this)
         send.setOnClickListener {
             sendMessage()
         }
@@ -84,9 +85,11 @@ class ActivityChatRoom : AppCompatActivity() {
             onlineStatus.text=status.online
         }
         Timber.d(status.online)
+
+         */
     }
 
-
+  /*
 
         private fun sendMessage() {
             val content = editText.text.toString()
@@ -126,9 +129,13 @@ class ActivityChatRoom : AppCompatActivity() {
 
     }
 
+   */
+
 
 
     }
+
+
 
 
 

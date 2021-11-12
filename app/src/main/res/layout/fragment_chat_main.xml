@@ -39,7 +39,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed"
         android:hint="send message.."
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:paddingStart="15dp"
         android:paddingTop="3dp"
         android:paddingEnd="10dp"
