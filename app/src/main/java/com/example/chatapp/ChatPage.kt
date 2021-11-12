@@ -91,7 +91,7 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
         )
         when(item?.itemId) {
             R.id.action_settings -> {
-                profileMenu?.showAsDropDown(requireView())
+                profileMenu?.showAsAnchorRightTop(binding.root)
                 Toast.makeText(requireContext(), "Yeah", Toast.LENGTH_SHORT).show()
             }
         }
