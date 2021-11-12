@@ -70,6 +70,7 @@
         android:layout_below="@id/icon"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:alpha="0.1"
         android:layout_marginTop="16dp"
         android:background="@color/colorLightGray"
         android:layout_toRightOf="@id/icon"

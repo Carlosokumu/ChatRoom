@@ -44,47 +44,9 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
     override val layoutResId: Int
         get() = R.layout.fragment_chatpage
     override val color: Int
-        get() = R.color.light_chat
+        get() = R.color.anotherWhats
 
 
-                /*
-
-                override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-                    super.onCreateOptionsMenu(menu, inflater)
-                   inflater.inflate(R.menu.top_menu,menu)
-                }
-
-                override fun onOptionsItemSelected(item: MenuItem): Boolean {
-                    val list= mutableListOf(
-                        PowerMenuItem("New Group", false), PowerMenuItem("Settings", false)
-                    )
-                    when(item.itemId){
-                        R.id.action_settings -> {
-                            val popMenu = PowerMenu.Builder(requireContext())
-                                .addItemList(list)
-                                .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
-                                .setMenuRadius(10f)
-                                .setMenuShadow(10f)
-                                .setTextColor(ContextCompat.getColor(requireContext(), R.color.beige))
-                                .setTextGravity(Gravity.CENTER)
-                                .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
-                                .setSelectedTextColor(Color.WHITE)
-                                .setMenuColor(Color.WHITE)
-                                .setSelectedMenuColor(
-                                    ContextCompat.getColor(
-                                        requireContext(),
-                                        R.color.colorPrimary
-                                    )
-                                )
-                                .setOnMenuItemClickListener(this)
-                                .build()
-                            popMenu.showAsDropDown(requireView())
-                        }
-                    }
-                    return super.onOptionsItemSelected(item)
-                }
-
-                 */
 
     override fun onItemClick(position: Int, item: PowerMenuItem?) {
 

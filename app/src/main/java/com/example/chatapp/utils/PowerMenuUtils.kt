@@ -33,7 +33,7 @@ object PowerMenuUtils {
                 .setTextGravity(Gravity.CENTER)
                 .setMenuColor(Color.WHITE)
                 .setSelectedEffect(false)
-                .setShowBackground(false)
+                .setShowBackground(true)
                 .setFocusable(true)
                 .setOnMenuItemClickListener(onMenuItemClickListener)
                 .build()

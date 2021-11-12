@@ -5,7 +5,7 @@
         <!-- ActionBar Background -->
         <item name="colorPrimary">@color/anotherWhats</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/sky_blue</item>
+        <item name="colorOnPrimary">@color/anotherWhats</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorAccent">@color/colorAccent</item>

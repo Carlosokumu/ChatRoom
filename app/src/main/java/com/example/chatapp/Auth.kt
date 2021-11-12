@@ -24,26 +24,6 @@ class Auth : BindingFragment<FragmentAuthBinding>(), OnNumber {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        /*
-        val v=inflater.inflate(R.layout.fragment_auth,container,false)
-        val customView=v.findViewById<CustomView>(R.id.customView)
-        customView.setOnNumber(this)
-        val phone=customView.getChildAt(1)
-        phone.findViewById<ImageView>(R.id.imageView).setOnClickListener {
-            val action=AuthDirections.actionAuthToChatpage()
-            val navController = Navigation.findNavController(requireView())
-            navController.navigate(action)
-        }
-        /*
-        ccp=phone.findViewById(R.id.ccp)
-        mobileNumber=phone.findViewById(R.id.mobile_number)
-        otpBtn=phone.findViewById(R.id.btnOtp)
-        otpBtn.setOnClickListener(this)
-        ccp.setOnCountryChangeListener(this)
-
-         */
-
-         */
         binding.myFlipper.setOnNumber(this)
         binding.myFlipper.getChildAt(1).findViewById<ImageView>(R.id.imageView).setOnClickListener {
             val action=AuthDirections.actionAuthToChatpage()
