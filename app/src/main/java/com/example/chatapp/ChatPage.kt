@@ -4,10 +4,10 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.*
-import android.widget.ActionMenuView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.chatapp.databinding.FragmentChatpageBinding
+import com.example.chatapp.utils.PowerMenuUtils
 import com.skydoves.powermenu.MenuAnimation
 import com.skydoves.powermenu.OnMenuItemClickListener
 import com.skydoves.powermenu.PowerMenu
@@ -20,16 +20,18 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
         FragmentAdapter(requireActivity().supportFragmentManager)
     }
     private lateinit var settings: MenuItem
+    private var profileMenu: PowerMenu? = null
+    private val onProfileItemClickListener = OnMenuItemClickListener<PowerMenuItem> { position, item ->
+        Toast.makeText(activity, item.title, Toast.LENGTH_SHORT).show()
+        profileMenu!!.dismiss()
+    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding.adapter =mainPagerAdapter
         binding.tabs.setupWithViewPager(binding.viewpager)
          binding.toolbar.inflateMenu(R.menu.top_menu)
         settings= binding.toolbar.menu.findItem(R.id.action_settings)
+        profileMenu =PowerMenuUtils.getProfilePowerMenu(requireContext(), requireActivity(), onProfileItemClickListener)
         settings.setOnMenuItemClickListener(this)
         return binding.root
     }
@@ -85,29 +87,11 @@ class ChatPage : BindingFragment<FragmentChatpageBinding>(),
 
     override fun onMenuItemClick(item: MenuItem?): Boolean {
         val list= mutableListOf(
-            PowerMenuItem("New Group", false), PowerMenuItem("Settings", false)
+                PowerMenuItem("New Group", false), PowerMenuItem("Settings", false)
         )
         when(item?.itemId) {
             R.id.action_settings -> {
-                val popMenu = PowerMenu.Builder(requireContext())
-                    .addItemList(list)
-                    .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
-                    .setMenuRadius(10f)
-                    .setMenuShadow(10f)
-                    .setTextColor(ContextCompat.getColor(requireContext(), R.color.beige))
-                    .setTextGravity(Gravity.CENTER)
-                    .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
-                    .setSelectedTextColor(Color.WHITE)
-                    .setMenuColor(Color.WHITE)
-                    .setSelectedMenuColor(
-                        ContextCompat.getColor(
-                            requireContext(),
-                            R.color.colorPrimary
-                        )
-                    )
-                    .setOnMenuItemClickListener(this)
-                    .build()
-                popMenu.showAsDropDown(requireView())
+                profileMenu?.showAsDropDown(requireView())
                 Toast.makeText(requireContext(), "Yeah", Toast.LENGTH_SHORT).show()
             }
         }
