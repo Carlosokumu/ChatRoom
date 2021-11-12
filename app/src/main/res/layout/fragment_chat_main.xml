@@ -99,9 +99,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_gravity="start"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/gotham"
                 android:gravity="center"
-                android:text="username"
+                android:text="Herb"
                 android:visibility="visible" />
 
             <TextView
@@ -110,13 +110,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="7dp"
+                android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed"
                 android:layout_gravity="start"
                 android:text="Typing........"
                 android:textSize="12dp"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/more"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/anotherWhats"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 
