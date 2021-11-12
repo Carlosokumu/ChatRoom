@@ -4,13 +4,13 @@
         <!-- Primary brand color. -->
         <!-- ActionBar Background -->
         <item name="colorPrimary">@color/anotherWhats</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/anotherWhats</item>
         <item name="colorOnPrimary">@color/anotherWhats</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!-- activities backgrounds -->
-        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowBackground">@color/anotherWhats</item>
         <item name="colorSecondaryVariant">@color/crimson</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
