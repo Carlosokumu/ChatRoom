@@ -4,35 +4,36 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:background="?actionBarItemBackground"
-        android:layout_height="50dp">
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorSelected"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed" />
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-    </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Welcome"
-        android:id="@+id/farmerName"
-        android:layout_marginTop="70dp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Carlos"
-        android:id="@+id/farmerOccupation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/farmerName"
-        android:textStyle="italic"
-        android:layout_height="wrap_content"/>
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
         android:id="@+id/FarmerImage"
-        android:layout_below="@+id/farmerOccupation"
+        android:layout_below="@+id/topBar"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/samplepic"
@@ -88,7 +89,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
-        android:background="@color/green_light"
+        android:background="@color/skyBlue"
         android:alpha="0.5"
         android:id="@+id/line2"
         android:layout_below="@id/secondRow"
@@ -122,26 +123,26 @@
             android:layout_width="wrap_content"
             android:layout_marginStart="20dp"
             android:textColor="@android:color/holo_purple"
-            android:fontFamily="@font/bold"
+            android:fontFamily="@font/lato"
             android:id="@+id/one"
-            android:text="@string/location"
+            android:text="@string/app_name"
             android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_marginStart="20dp"
             android:textSize="20dp"
             android:textColor="@android:color/holo_purple"
-            android:fontFamily="@font/bold"
+            android:fontFamily="@font/lato"
             android:id="@+id/two"
             android:layout_marginEnd="20dp"
             android:layout_alignParentRight="true"
-            android:text="@string/mail"
+            android:text="@string/app_name"
             android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_below="@id/one"
             android:layout_marginStart="20dp"
-            android:text="@string/none"
+            android:text="@string/app_name"
             android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="wrap_content"
@@ -150,7 +151,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_alignParentRight="true"
-            android:text="@string/none"
+            android:text="@string/app_name"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
@@ -159,40 +160,8 @@
         android:layout_marginTop="30dp"
         android:layout_below="@+id/firstDetails"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textColor="@android:color/holo_purple"
-            android:fontFamily="@font/bold"
-            android:textSize="20dp"
-            android:id="@+id/name"
-            android:text="@string/phone"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textColor="@android:color/holo_purple"
-            android:fontFamily="@font/bold"
-            android:id="@+id/category"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentRight="true"
-            android:text="@string/customer"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:id="@+id/txtPhoneNumber"
-            android:layout_below="@+id/name"
-            android:text="@string/phoneNumber"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_below="@id/category"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentRight="true"
-            android:text="@string/none"
-            android:layout_height="wrap_content"/>
+
+
 
     </RelativeLayout>
     <de.hdodenhof.circleimageview.CircleImageView
