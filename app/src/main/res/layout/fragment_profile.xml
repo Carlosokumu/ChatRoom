@@ -47,25 +47,23 @@
         android:id="@+id/line"
         android:layout_below="@id/FarmerImage"
         android:layout_height="1dp"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/line"
         android:layout_marginTop="10dp"
         android:id="@+id/firstrow"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_height="wrap_content"
-            android:text="1.3k"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_height="wrap_content"
-            android:text="1.3k"/>
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/gotham"
+            android:layout_centerInParent="true"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:text="Profile"/>
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/secondRow"
@@ -125,44 +123,71 @@
             android:textColor="@android:color/holo_purple"
             android:fontFamily="@font/lato"
             android:id="@+id/one"
-            android:text="@string/app_name"
+            android:text="Name"
             android:layout_height="wrap_content"/>
-        <TextView
+        <ImageButton
             android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textSize="20dp"
-            android:textColor="@android:color/holo_purple"
-            android:fontFamily="@font/lato"
-            android:id="@+id/two"
-            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_icon"
             android:layout_alignParentRight="true"
-            android:text="@string/app_name"
+            android:backgroundTint="@color/anotherWhats"
             android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_below="@id/one"
             android:layout_marginStart="20dp"
-            android:text="@string/app_name"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_below="@id/two"
-            android:id="@+id/txtEmail"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentRight="true"
-            android:text="@string/app_name"
+            android:text="Dark Spider"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/secondDetails"
         android:layout_below="@+id/firstDetails"
         android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/holo_purple"
+            android:fontFamily="@font/lato"
+            android:id="@+id/two"
+            android:text="About"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_icon"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/anotherWhats"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/two"
+            android:layout_marginStart="20dp"
+            android:text="Man Writing Code"
+            android:layout_height="wrap_content"/>
 
 
 
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/secondDetails"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/holo_purple"
+            android:fontFamily="@font/lato"
+            android:id="@+id/three"
+            android:text="Phone"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/three"
+            android:layout_marginStart="20dp"
+            android:text="+254705136690"
+            android:layout_height="wrap_content"/>
     </RelativeLayout>
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="50dp"
