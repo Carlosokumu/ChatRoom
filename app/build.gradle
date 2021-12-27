@@ -88,5 +88,7 @@ dependencies {
     implementation 'com.github.seanghay:statusbar:1.0.1'
     //Pop Up menu
     implementation "com.github.skydoves:powermenu:2.2.0"
+    //RealTimeBlur
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
 
 }
